@@ -65,14 +65,12 @@ classDiagram
 ### **Models**
 
 #### **Coordinates**
-- **Type**: Data model
 - **Responsibility**: Represents geographic coordinates
 - **Properties**: 
   - `Lat`: Latitude (double)
   - `Lon`: Longitude (double)
 
 #### **DailyForecast**
-- **Type**: Data model  
 - **Responsibility**: Represents weather forecast for a specific period
 - **Properties**:
   - `Date`: Forecast date (DateOnly)

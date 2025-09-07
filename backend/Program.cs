@@ -10,6 +10,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Add CORS for React frontend
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("ReactApp", policy =>
+    {
+        policy.WithOrigins("http://localhost:3000")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 // Typed HTTP clients with required User-Agent header (NWS blocks requests without it)
 const string userAgent = "Test-Oil-Evaluation/1.0 (+https://example.com)";
 
@@ -33,6 +44,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(); // adds swagger ui, in .9 this is not included by default
 }
+
+// Use CORS
+app.UseCors("ReactApp");
 
 app.MapGet("/api/forecast", async (string address, IGeocodingService geocoder, IWeatherService weather, ILogger<Program> logger, CancellationToken ct) =>
 {

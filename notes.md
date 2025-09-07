@@ -38,3 +38,43 @@ make a high level with vi
 
 and how the different components fit together
 and who your audience is.
+
+
+
+
+
+
+Notes while building:
+.net 9.0 
+https://learning.oreilly.com/library/view/c-13-and/9781835881224/Text/Chapter_04.xhtml#_idParaDest-250
+
+TTD follows same principles as c++ 
+
+
+API architecture 
+https://learning.oreilly.com/library/view/mastering-api-architecture/9781492090625/
+
+chapter 2: testing 
+
+types of testing with api's
+
+Q1: 
+unit and components testing 
+verify that service has been created and works 
+
+unit tests - small isolated units of code 
+
+service tests - verify that service has been created and works 
+
+end to end test with UI
+
+API Components testing:
+possilbe test case to look for:
+is the correct status code returned
+does the repsone contain the correct data
+is tan incoming payload rejected if null or empty parm passed in 
+when i send a request where the accepted contet type is XML, will the data return the expected format 
+if a request is made by a yser who does not hvae the correct entitlement what will the response be?
+what will happen if an empty dataset is returned 
+when creating a resource does the location header point to a new asset created
+

@@ -34,9 +34,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(); // adds swagger ui, in .9 this is not included by default
 }
 
-// app.UseHttpsRedirection(); // Disabled for HTTP-only development
-
-
 app.MapGet("/api/forecast", async (string address, IGeocodingService geocoder, IWeatherService weather, ILogger<Program> logger, CancellationToken ct) =>
 {
     try
@@ -73,4 +70,7 @@ app.MapGet("/api/forecast", async (string address, IGeocodingService geocoder, I
 .WithOpenApi();
 
 app.Run();
+
+// Make Program class accessible for integration testing
+public partial class Program { }
 

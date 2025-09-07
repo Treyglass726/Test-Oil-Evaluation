@@ -1,6 +1,5 @@
 @backend_HostAddress = http://localhost:5183
 
-GET {{backend_HostAddress}}/weatherforecast/
+# Test with Akron, OH address
+GET {{backend_HostAddress}}/api/forecast?address=901+Warrington+Rd+Akron+OH
 Accept: application/json
-
-###

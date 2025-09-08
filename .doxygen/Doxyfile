@@ -1,0 +1,52 @@
+# Doxyfile for Test-Oil-Evaluation
+# Minimal, explicit config tailored for this repository
+
+# ---- Project ----
+PROJECT_NAME           = "Test-Oil-Evaluation"
+OUTPUT_DIRECTORY       = docs
+CREATE_SUBDIRS         = NO
+
+# ---- Build / formats ----
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_LATEX         = NO
+GENERATE_XML           = NO
+GENERATE_TREEVIEW      = YES
+
+# ---- Inputs ----
+INPUT                  = backend README.md reqs.md notes.md backend/Docs.md
+RECURSIVE              = YES
+FILE_PATTERNS          = *.cs *.md
+EXCLUDE_PATTERNS       = */bin/* */obj/* */node_modules/* frontend/* backend.Tests/*
+
+# Use README.md as the main page
+USE_MDFILE_AS_MAINPAGE = README.md
+MARKDOWN_SUPPORT       = YES
+AUTOLINK_SUPPORT       = YES
+
+# ---- Extraction ----
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = YES
+EXTRACT_PACKAGE        = YES
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+
+# ---- Source browsing ----
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+FULL_PATH_NAMES        = NO
+STRIP_FROM_PATH        = .
+
+# ---- Diagrams (Graphviz) ----
+HAVE_DOT               = YES
+DOT_IMAGE_FORMAT       = svg
+CLASS_DIAGRAMS         = YES
+CALL_GRAPH             = NO
+CALLER_GRAPH           = NO
+
+# ---- Language tweaks ----
+# Do not optimize for Java (prevents odd namespace->packages presentation for C#)
+OPTIMIZE_OUTPUT_JAVA   = NO
+
+QUIET                  = NO

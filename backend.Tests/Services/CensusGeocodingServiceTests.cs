@@ -47,7 +47,7 @@ public class CensusGeocodingServiceTests
         var service = new CensusGeocodingService(httpClient);
 
         // Act
-        var result = await service.GeocodeAsync("901 warrington rd");
+        var result = await service.GeocodeAsync("901 warrington rd Akron oh");
 
         // Assert
         Assert.NotNull(result);

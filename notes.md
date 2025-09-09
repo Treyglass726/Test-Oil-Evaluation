@@ -78,3 +78,22 @@ if a request is made by a yser who does not hvae the correct entitlement what wi
 what will happen if an empty dataset is returned 
 when creating a resource does the location header point to a new asset created
 
+
+
+software design principles review
+
+GOF design patterns
+https://learning.oreilly.com/library/view/design-patterns-elements/0201633612/fm.html
+
+program to an interface not an implementation
+favor object composition over inheritance
+https://www.c-sharpcorner.com/article/solid-with-net-core/
+
+solid principles
+single responsiblity principle 
+open closed principle 
+liskov substitution principle 
+interface segregation principle 
+dependency inversion principle
+
+

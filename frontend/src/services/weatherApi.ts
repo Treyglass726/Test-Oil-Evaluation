@@ -1,6 +1,6 @@
 import { WeatherApiResponse } from '../types/weather';
 
-const API_BASE_URL = 'http://localhost:5183'; // Your .NET backend URL
+const API_BASE_URL = 'https://localhost:7125'; // Backend URL 
 
 export const weatherApi = {
   async getForecast(address: string): Promise<WeatherApiResponse> {
